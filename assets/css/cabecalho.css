@@ -1,0 +1,12 @@
+.cabecalho {
+    align-items: center;
+    background-color: #051d40;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.cabecalho__logo {
+    height: 100ps;
+    width: 100px;
+}
