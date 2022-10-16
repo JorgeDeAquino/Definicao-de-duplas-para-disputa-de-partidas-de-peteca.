@@ -1,0 +1,57 @@
+html {
+    width: 100%;
+}
+
+body {
+    background: #fdfdfd;
+    display: grid;  
+    grid-template-areas: 
+        "cabecalho"
+        "conteudo"
+        "rodape";
+    grid-template-columns: auto;
+    grid-template-rows: 110px calc(100vh - 160px)  50px;  
+}
+
+.cabecalho {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    background-color: #051d40;
+}
+
+.cabecalho__logo {
+    width: 100px;
+    height: 100ps;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    box-shadow: 0px 0px 16px 3px rgba(6,8,18,1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 97%;
+    height: 97%;
+    background-color: #191970;
+    border-radius: 12px;
+}
+
+.container__label {
+    font-size: 1.5rem;
+    color: #fdfdfd;
+    margin-bottom: 1rem;
+}
+
+.container__select {
+    border-radius: 12px;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+}

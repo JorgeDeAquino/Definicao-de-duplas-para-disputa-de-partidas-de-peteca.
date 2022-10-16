@@ -1,0 +1,34 @@
+.rodape {
+    align-items: center;
+    background: #051d40;
+    border-top: 1px solid #fdfdfd;
+    color: #fdfdfd;
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    justify-content: center;
+    padding: 0.2rem 0;
+    text-transform: lowercase;
+}
+
+.rodape__social__media{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.rodape__social__media li{
+    list-style: none;
+
+}
+
+.rodape__social__media a{
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.rodape__img img{
+    height: 30px;
+    width: 30px;
+}
