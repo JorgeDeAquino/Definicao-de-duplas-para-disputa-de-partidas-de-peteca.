@@ -30,7 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 97%;
+    height: 95%;
     justify-content: center;
     width: 97%;
 }
@@ -41,8 +41,8 @@ body {
     height: 70%;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: flex-start;
     padding: 1rem 1.5rem;
+    justify-content: flex-start;
     width: 70%;
 }
 
@@ -57,6 +57,6 @@ body {
 }
 
 .cadastro__input {
-    margin: 0.7rem 0;
     margin-left: 1rem;
+    margin: 0.7rem 0;
 }
