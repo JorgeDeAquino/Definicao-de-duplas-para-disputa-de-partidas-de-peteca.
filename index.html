@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
     <link rel="stylesheet" href="./assets/css/rodape.css">
-    <link rel="stylesheet" href="/assets/css/index/rodape.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/index/style-index.css">
     <title>Peteca de Quinta</title>
@@ -23,15 +22,15 @@
         <section class="container">
             <label class="container__label" for="quantidade-de-jogadores-select"> SELECIONE A QUANTIDADE DE JOGADORES </label>
             <select required class="container__select" name="quantidade-de-jogadores-select" id="quantidade-de-jogadores-select">
-                <option disabled value=""> Numero de Jogadores? </option>
-                <option value="5-jogadores"> 5 - jogadores</option>
-                <option value="6-jogadores"> 6 - jogadores</option>
-                <option value="7-jogadores"> 7 - jogadores</option>
-                <option value="8-jogadores"> 8 - jogadores</option>
-                <option value="9-jogadores"> 9 - jogadores</option>
-                <option value="10-jogadores">10 - jogadores</option>
+                <option disabled selected> Numero de Jogadores? </option>
+                <option value="5"> 5 - jogadores</option>
+                <option value="6"> 6 - jogadores</option>
+                <option value="7"> 7 - jogadores</option>
+                <option value="8"> 8 - jogadores</option>
+                <option value="9"> 9 - jogadores</option>
+                <option value="10">10 - jogadores</option>
             </select>
-            <button type="submit"> Jogar </button>
+            <button id="btn" type="submit"> Jogar </button>
         </section>
     </main>
 
@@ -61,6 +60,6 @@
             </a>
         </ul>
     </footer>
-    
+    <script src="./index.js"></script>
 </body>
 </html>
