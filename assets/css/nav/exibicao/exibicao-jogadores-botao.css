@@ -1,0 +1,14 @@
+.exibicao__jogadores-botao {
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    background-color: #fdfdfd;
+}
+
+.exibicao__jogadores-botao:hover {
+    font-size: 1rem;
+    color: #fdfdfd;
+    background-color: #020d3f;
+    cursor: pointer;
+}

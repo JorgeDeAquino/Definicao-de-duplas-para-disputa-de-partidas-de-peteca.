@@ -1,37 +1,360 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
     <link rel="stylesheet" href="./assets/css/rodape.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/index/style-index.css">
+    <link rel="stylesheet" href="./assets/css/main-template.css">
+    <link rel="stylesheet" href="./assets/css/nav/selecao-exibicao.css">
+    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores-botao.css">
+    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores-label.css">
+    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores-select.css">
+    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores.css">
+    <link rel="stylesheet" href="./assets/css/nav/exibicao/exibicao-jogadores-botao.css">
+    <link rel="stylesheet" href="./assets/css/nav/exibicao/exibicao-jogadores.css">
+    <link rel="stylesheet" href="./assets/css/nav/definicao-table/definicao-confrontos.css">
+    <link rel="stylesheet" href="./assets/css/hide.css">
     <title>Peteca de Quinta</title>
 </head>
+
 <body>
 
     <header class="cabecalho">
         <picture class="cabecalho__apresentacao">
-            <img src="img/logo_peteca.pNG" alt="Logo da Peteca" class="cabecalho__logo">
+            <img src="./assets/img/logo_peteca.png" alt="Logo da Peteca" class="cabecalho__logo">
         </picture>
     </header>
 
     <main class="conteudo">
-        <section class="container">
-            <label class="container__label" for="quantidade-de-jogadores-select"> SELECIONE A QUANTIDADE DE JOGADORES </label>
-            <select required class="container__select" name="quantidade-de-jogadores-select" id="quantidade-de-jogadores-select">
-                <option disabled selected> Numero de Jogadores? </option>
-                <option value="5"> 5 - jogadores</option>
-                <option value="6"> 6 - jogadores</option>
-                <option value="7"> 7 - jogadores</option>
-                <option value="8"> 8 - jogadores</option>
-                <option value="9"> 9 - jogadores</option>
-                <option value="10">10 - jogadores</option>
-            </select>
-            <button id="btn" type="submit"> Jogar </button>
+        <section class="conteudo__detalhe">
+            <nav class="selecao__exibicao">
+                <section class="selecao__jogadores">
+                    <label class="selecao__jogadores-label" for="quantidade__jogadores-select"> SELECIONE A QUANTIDADE
+                        DE
+                        JOGADORES </label>
+                    <select required class="selecao__jogadores-select" name="quantidade__jogadores-select"
+                        id="quantidade__jogadores-select">
+                        <option disabled selected> Numero de Jogadores? </option>
+                        <option value="5"> 5 - jogadores</option>
+                        <option value="6"> 6 - jogadores</option>
+                        <option value="7"> 7 - jogadores</option>
+                        <option value="8"> 8 - jogadores</option>
+                        <option value="9"> 9 - jogadores</option>
+                        <option value="10">10 - jogadores</option>
+                    </select>
+                    <button class="selecao__jogadores-botao" id="selecao-btn" type="submit"> Jogar </button>
+                </section>
+
+                <section class="exibicao__jogadores">
+                    <h2 class="exibicao__jogadores-titulo hide__jogadores"> Jogadores </h2>
+                    <ul>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 01 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_1" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 02 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_2" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 03 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_3" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 04 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_4" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 05 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_5" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 06 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_6" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 07 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_7" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 08 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_8" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 09 </label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_9" />
+                        </li>
+                        <li class="exibicao__jogadores-jogador hide__jogadores">
+                            <label class="exibicao__jogadores-label"> Jogador - 10</label>
+                            <input class="exibicao__jogadores-input" type="text" id="jogador_10" />
+                        </li>
+                    </ul>
+                    <button class="exibicao__jogadores-botao hide__botao__jogar" id="btn-jogar" type="submit"> Definir
+                        Confrontos </button>
+                </section>
+            </nav>
+
+            <section class="definicao__confrontos">
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 1</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_1">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 2</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_2">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 3</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_3">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 4</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_4">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 5</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_5">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 6</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_6">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 7</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_7">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 8</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_8">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 9</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_9">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 10</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_10">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 11</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_11">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 12</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_12">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 13</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_13">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 14</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_14">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 15</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_15">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 16</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_16">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 17</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_17">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 18</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_18">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 19</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_19">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 20</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_20">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 21</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_21">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 22</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_22">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="definicao__confrontos-box hide-definicao">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Partida 23</th>
+                            </tr>
+                        </thead>
+                        <tbody id="partida_23">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </section>
+
     </main>
 
     <footer class="rodape">
@@ -40,26 +363,26 @@
             <a href="https://www.linkedin.com/in/jorge-alexandre-de-aquino/" target="_blank">
                 <li>
                     <picture class="rodape__img">
-                        <img src="./img/icone-linkedin-azul.png" alt="logo linkedin">
+                        <img src="./assets/img/icone-linkedin-azul.png" alt="logo linkedin">
                     </picture>
                 </li>
             </a>
             <a href="https://github.com/JorgeDeAquino" target="_blank">
                 <li>
                     <picture class="rodape__img">
-                        <img src="./img/icone-github.png" alt="logo github">
+                        <img src="./assets/img/icone-github.png" alt="logo github">
                     </picture>
                 </li>
             </a>
             <a href="mailto:jorgeaamsantos@gmail.com" target="_blank">
                 <li>
                     <picture class="rodape__img">
-                        <img src="./img/logo-email.png" alt="logo email">
-                    </picture>                    
+                        <img src="./assets/img/logo-email.png" alt="logo email">
+                    </picture>
                 </li>
             </a>
         </ul>
     </footer>
-    <script src="./index.js"></script>
+<script src="./main.js"></script>
 </body>
 </html>

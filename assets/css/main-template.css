@@ -1,7 +1,3 @@
-html {
-    width: 100%;
-}
-
 body {
     background: #fdfdfd;
     display: grid;  
@@ -10,35 +6,24 @@ body {
         "conteudo"
         "rodape";
     grid-template-columns: auto;
-    grid-template-rows: 110px calc(100vh - 160px)  50px;  
+    grid-template-rows: 120px auto  60px; 
 }
 
-.conteudo {
+.conteudo{
     align-items: center;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
-.container {
-    align-items: center;
+.conteudo__detalhe{
+    align-items: flex-start;
     background-color: #191970;
     border-radius: 12px;
     box-shadow: 0px 0px 16px 3px rgba(6,8,18,1);
-    display: flex;
-    flex-direction: column;
-    height: 95%;
-    justify-content: center;
-    width: 97%;
-}
-
-.container__label {
     color: #fdfdfd;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.container__select {
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    padding: 0.7rem;
+    display: flex;
+    margin: 0.5rem 0;
+    justify-content: center;
+    width: 98%;
 }

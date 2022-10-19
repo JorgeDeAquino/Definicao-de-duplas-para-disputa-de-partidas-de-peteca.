@@ -1,0 +1,29 @@
+.exibicao__jogadores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exibicao__jogadores-titulo {
+    font-size: 2rem;
+    color: #fdfdfd;
+    padding: 0.5rem 0;
+}
+
+.exibicao__jogadores-jogador {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fdfdfd;
+    padding: 1rem 0;
+}
+
+.exibicao__jogadores-label {
+    margin-right: 0.7rem;
+}
+
+.exibicao__jogadores-input {
+    border-radius: 5px;
+    padding: 0.2rem;
+}

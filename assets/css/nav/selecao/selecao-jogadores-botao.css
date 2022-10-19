@@ -1,0 +1,14 @@
+.selecao__jogadores-botao{
+    border-radius: 5px;
+    padding: 0.2rem 0.3rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    background-color: #fdfdfd;
+}
+
+.selecao__jogadores-botao:hover{
+    font-size: 1rem;
+    color: #fdfdfd;
+    background-color: #020d3f;
+    cursor: pointer;
+}
