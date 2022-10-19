@@ -7,25 +7,31 @@ btn.addEventListener("click", function () {
     if (nDeJogadores == 5) {
         aparecerLabels5Jgd();
         aparecerJogos5()
+        aparecerBotaoJogadores()
     } else if (nDeJogadores == 6) {
         aparecerLabels6Jgd()
         aparecerJogos6()
+        aparecerBotaoJogadores()
     } else if (nDeJogadores == 7) {
         aparecerLabels7Jgd()
         aparecerJogos7()
+        aparecerBotaoJogadores()
     } else if (nDeJogadores == 8) {
         aparecerLabels8Jgd()
         aparecerJogos8()
+        aparecerBotaoJogadores()
     } else if (nDeJogadores == 9) {
         aparecerLabels9Jgd()
         aparecerJogos9()
+        aparecerBotaoJogadores()
     } else if (nDeJogadores == 10) {
         aparecerLabels10Jgd()
         aparecerJogos10()
+        aparecerBotaoJogadores()
     } else {
         alert('opção invalida, selecione a quantidade de jogadores.')
     }
-    aparecerBotaoJogadores()
+  
 });
 
 //função para aparecer o botão de cadastrar os jogadores ao clicar

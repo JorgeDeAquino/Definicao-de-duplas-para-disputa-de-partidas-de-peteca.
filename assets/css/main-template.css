@@ -13,6 +13,7 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 180px);
     width: 100%;
 }
 
@@ -26,4 +27,5 @@ body {
     margin: 0.5rem 0;
     justify-content: center;
     width: 98%;
+    min-height: 90%;
 }
