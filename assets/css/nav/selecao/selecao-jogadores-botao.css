@@ -6,9 +6,13 @@
     background-color: #fdfdfd;
 }
 
-.selecao__jogadores-botao:hover{
-    font-size: 1rem;
+.btn__action:active{
     color: #fdfdfd;
     background-color: #020d3f;
+}
+
+.btn__action:hover{
+    font-size: 1rem;
     cursor: pointer;
+    border: 3px solid #fdfdfd;
 }
