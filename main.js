@@ -7,37 +7,63 @@ btn.addEventListener("click", function () {
     if (nDeJogadores == 5) {
         aparecerLabels5Jgd();
         aparecerJogos5()
-        aparecerBotaoJogadores()
+        movimentaElementos ()
     } else if (nDeJogadores == 6) {
         aparecerLabels6Jgd()
         aparecerJogos6()
-        aparecerBotaoJogadores()
+        movimentaElementos ()
     } else if (nDeJogadores == 7) {
         aparecerLabels7Jgd()
         aparecerJogos7()
-        aparecerBotaoJogadores()
+        movimentaElementos ()
     } else if (nDeJogadores == 8) {
         aparecerLabels8Jgd()
         aparecerJogos8()
-        aparecerBotaoJogadores()
+        movimentaElementos ()
     } else if (nDeJogadores == 9) {
         aparecerLabels9Jgd()
         aparecerJogos9()
-        aparecerBotaoJogadores()
+        movimentaElementos ()
     } else if (nDeJogadores == 10) {
         aparecerLabels10Jgd()
         aparecerJogos10()
-        aparecerBotaoJogadores()
+        movimentaElementos ()
     } else {
         alert('opção invalida, selecione a quantidade de jogadores.')
     }
-  
+
 });
+
+//executa funções para posicionamento dos elementos na tela
+function movimentaElementos () {
+    aparecerBotaoJogadores()
+    desabilitarBotaoJogar()
+    irParaPosicao()
+    desabilitarSelectJogadores()
+}
+
+//função desabilitar o botão apos seleção de numero de jogadores
+function desabilitarBotaoJogar() {
+    document.getElementById("selecao-btn").classList.add('hide__botao__jogar');
+}
+
+//função desabilitar o label apos seleção de numero de jogadores
+function desabilitarSelectJogadores() {
+    document.getElementById("quantidade__jogadores-select").disabled = true;
+}
 
 //função para aparecer o botão de cadastrar os jogadores ao clicar
 function aparecerBotaoJogadores() {
     const labelBotaoJogadores = document.querySelector('.hide__botao__jogar');
     labelBotaoJogadores.classList.remove('hide__botao__jogar');
+}
+
+//função para posiccionar o elemento no começo
+function irParaPosicao() {
+    const posicaoConteudoDetalhe = document.querySelector('.hover__conteudo__detalhe');
+    const tamanhoSelecaoJogadores = document.querySelector('.hover__selecao__jogadores');
+    posicaoConteudoDetalhe.classList.remove('hover__conteudo__detalhe');
+    tamanhoSelecaoJogadores.classList.remove('hover__selecao__jogadores');
 }
 
 //função de escolha de jogadores
@@ -83,11 +109,12 @@ function aparecerLabels10Jgd() {
 const elementosEscondidos = document.querySelectorAll('.hide-definicao');
 let habilitarJogadores = "";
 
+//Libera elementos na quantidade selecionada
 function aparecerJogos5() {
     for (var i = 0; i < elementosEscondidos.length - 18; i++) {
         elementosEscondidos[i].classList.remove('hide-definicao')
     }
-    habilitarJogadores = 5; 
+    habilitarJogadores = 5;
     return habilitarJogadores;
 }
 
@@ -95,7 +122,7 @@ function aparecerJogos6() {
     for (var i = 0; i < elementosEscondidos.length - 15; i++) {
         elementosEscondidos[i].classList.remove('hide-definicao')
     }
-    habilitarJogadores = 6; 
+    habilitarJogadores = 6;
     return habilitarJogadores;
 }
 
@@ -103,7 +130,7 @@ function aparecerJogos7() {
     for (var i = 0; i < elementosEscondidos.length - 13; i++) {
         elementosEscondidos[i].classList.remove('hide-definicao')
     }
-    habilitarJogadores = 7; 
+    habilitarJogadores = 7;
     return habilitarJogadores;
 }
 
@@ -111,7 +138,7 @@ function aparecerJogos8() {
     for (var i = 0; i < elementosEscondidos.length - 9; i++) {
         elementosEscondidos[i].classList.remove('hide-definicao')
     }
-    habilitarJogadores = 8; 
+    habilitarJogadores = 8;
     return habilitarJogadores;
 }
 
@@ -119,7 +146,7 @@ function aparecerJogos9() {
     for (var i = 0; i < elementosEscondidos.length - 5; i++) {
         elementosEscondidos[i].classList.remove('hide-definicao')
     }
-    habilitarJogadores = 9; 
+    habilitarJogadores = 9;
     return habilitarJogadores;
 }
 
@@ -127,7 +154,7 @@ function aparecerJogos10() {
     for (var i = 0; i < elementosEscondidos.length; i++) {
         elementosEscondidos[i].classList.remove('hide-definicao')
     }
-    habilitarJogadores = 10; 
+    habilitarJogadores = 10;
     return habilitarJogadores;
 }
 
@@ -139,46 +166,54 @@ btnJogar.addEventListener("click", function () {
         jogoCom5()
     } else if (habilitarJogadores == 6) {
         jogoCom6()
-    }else if (habilitarJogadores == 7) {
+    } else if (habilitarJogadores == 7) {
         jogoCom7()
-    }else if (habilitarJogadores == 8) {
+    } else if (habilitarJogadores == 8) {
         jogoCom8()
-    }else if (habilitarJogadores == 9) {
+    } else if (habilitarJogadores == 9) {
         jogoCom9()
-    }else if (habilitarJogadores == 10) {
+    } else if (habilitarJogadores == 10) {
         jogoCom10()
     }
 });
 
+/* possivel logica: como inserir elementos dinamicamente, adição de numero na declaração da variavel por template string?
+for(i=0; i<10; i++){
+    let jogador = document.getElementById(`jogador_${i + 1}`).value;
+    console.log(jogador)
+   }
+   */
+
 //jogadores
 function jogoCom5() {
-   let jogador1 = document.getElementById("jogador_1").value;
-   let jogador2 = document.getElementById("jogador_2").value;
-   let jogador3 = document.getElementById("jogador_3").value;
-   let jogador4 = document.getElementById("jogador_4").value;
-   let jogador5 = document.getElementById("jogador_5").value;
+    let jogador1 = document.getElementById("jogador_1").value;
+    let jogador2 = document.getElementById("jogador_2").value;
+    let jogador3 = document.getElementById("jogador_3").value;
+    let jogador4 = document.getElementById("jogador_4").value;
+    let jogador5 = document.getElementById("jogador_5").value;
 
 
-    let prt1 = `<tr><td> ${jogador2} - ${jogador1} </td></tr>  <tr><td>${jogador3} - ${jogador5}</td></tr>`;
-    let prt2 = `<tr><td> ${jogador1} - ${jogador3} </td></tr>  <tr><td>${jogador5} - ${jogador4}</td></tr>`;
-    let prt3 = `<tr><td> ${jogador4} - ${jogador1} </td></tr>  <tr><td>${jogador3} - ${jogador2}</td></tr>`;
-    let prt4 = `<tr><td> ${jogador1} - ${jogador5} </td></tr>  <tr><td>${jogador2} - ${jogador4}</td></tr>`;
-    let prt5 = `<tr><td> ${jogador5} - ${jogador2} </td></tr>  <tr><td>${jogador4} - ${jogador3}</td></tr>`;
+    let prt1 = `<tr><td> ${jogador2} - ${jogador1} </td></tr>  <tr><td> ${jogador3} - ${jogador5} </td></tr>`;
+    let prt2 = `<tr><td> ${jogador1} - ${jogador3} </td></tr>  <tr><td> ${jogador5} - ${jogador4} </td></tr>`;
+    let prt3 = `<tr><td> ${jogador4} - ${jogador1} </td></tr>  <tr><td> ${jogador3} - ${jogador2} </td></tr>`;
+    let prt4 = `<tr><td> ${jogador1} - ${jogador5} </td></tr>  <tr><td> ${jogador2} - ${jogador4} </td></tr>`;
+    let prt5 = `<tr><td> ${jogador5} - ${jogador2} </td></tr>  <tr><td> ${jogador4} - ${jogador3} </td></tr>`;
 
-    document.getElementById("partida_1").innerHTML = `${prt1}`;
-    document.getElementById("partida_2").innerHTML = `${prt2}`;
-    document.getElementById("partida_3").innerHTML = `${prt3}`;
-    document.getElementById("partida_4").innerHTML = `${prt4}`;
-    document.getElementById("partida_5").innerHTML = `${prt5}`;
+    let partidas = [prt1, prt2, prt3, prt4, prt5];
+
+    for(var i = 0; i < partidas.length; i++){
+        let prt = document.getElementById(`partida_${i + 1}`);
+        prt.innerHTML = `${partidas[i]}`
+    };
 };
 
 function jogoCom6() {
-   let jogador1 = document.getElementById("jogador_1").value;
-   let jogador2 = document.getElementById("jogador_2").value;
-   let jogador3 = document.getElementById("jogador_3").value;
-   let jogador4 = document.getElementById("jogador_4").value;
-   let jogador5 = document.getElementById("jogador_5").value;
-   let jogador6 = document.getElementById("jogador_6").value;
+    let jogador1 = document.getElementById("jogador_1").value;
+    let jogador2 = document.getElementById("jogador_2").value;
+    let jogador3 = document.getElementById("jogador_3").value;
+    let jogador4 = document.getElementById("jogador_4").value;
+    let jogador5 = document.getElementById("jogador_5").value;
+    let jogador6 = document.getElementById("jogador_6").value;
 
     let prt1 = `<tr><td> ${jogador2} - ${jogador1} </td></tr>  <tr><td> ${jogador3} - ${jogador5} </td></tr>`
     let prt2 = `<tr><td> ${jogador4} - ${jogador6} </td></tr>  <tr><td> ${jogador1} - ${jogador3} </td></tr>`
@@ -189,24 +224,23 @@ function jogoCom6() {
     let prt7 = `<tr><td> ${jogador6} - ${jogador1} </td></tr>  <tr><td> ${jogador5} - ${jogador2} </td></tr>`
     let prt8 = `<tr><td> ${jogador4} - ${jogador3} </td></tr>  <tr><td> ${jogador2} - ${jogador1} </td></tr>`
 
-    document.getElementById("partida_1").innerHTML = `${prt1}`;
-    document.getElementById("partida_2").innerHTML = `${prt2}`;
-    document.getElementById("partida_3").innerHTML = `${prt3}`;
-    document.getElementById("partida_4").innerHTML = `${prt4}`;
-    document.getElementById("partida_5").innerHTML = `${prt5}`;
-    document.getElementById("partida_6").innerHTML = `${prt6}`;
-    document.getElementById("partida_7").innerHTML = `${prt7}`;
-    document.getElementById("partida_8").innerHTML = `${prt8}`;
+    let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8];
+
+    for(var i = 0; i < partidas.length; i++){
+        let prt = document.getElementById(`partida_${i + 1}`);
+        prt.innerHTML = `${partidas[i]}`
+    };
+
 };
 
 function jogoCom7() {
-   let jogador1 = document.getElementById("jogador_1").value;
-   let jogador2 = document.getElementById("jogador_2").value;
-   let jogador3 = document.getElementById("jogador_3").value;
-   let jogador4 = document.getElementById("jogador_4").value;
-   let jogador5 = document.getElementById("jogador_5").value;
-   let jogador6 = document.getElementById("jogador_6").value;
-   let jogador7 = document.getElementById("jogador_7").value;
+    let jogador1 = document.getElementById("jogador_1").value;
+    let jogador2 = document.getElementById("jogador_2").value;
+    let jogador3 = document.getElementById("jogador_3").value;
+    let jogador4 = document.getElementById("jogador_4").value;
+    let jogador5 = document.getElementById("jogador_5").value;
+    let jogador6 = document.getElementById("jogador_6").value;
+    let jogador7 = document.getElementById("jogador_7").value;
 
     let prt1 = `<tr><td> ${jogador2} - ${jogador1} </td></tr>  <tr><td> ${jogador3} - ${jogador7} </td></tr>`;
     let prt2 = `<tr><td> ${jogador4} - ${jogador6} </td></tr>  <tr><td> ${jogador1} - ${jogador3} </td></tr>`;
@@ -219,27 +253,23 @@ function jogoCom7() {
     let prt9 = `<tr><td> ${jogador7} - ${jogador2} </td></tr>  <tr><td> ${jogador6} - ${jogador3} </td></tr>`;
     let prt10 = `<tr><td> ${jogador5} - ${jogador4} </td></tr>  <tr><td> ${jogador2} - ${jogador1} </td></tr>`;
 
-    document.getElementById("partida_1").innerHTML = `${prt1}`;
-    document.getElementById("partida_2").innerHTML = `${prt2}`;
-    document.getElementById("partida_3").innerHTML = `${prt3}`;
-    document.getElementById("partida_4").innerHTML = `${prt4}`;
-    document.getElementById("partida_5").innerHTML = `${prt5}`;
-    document.getElementById("partida_6").innerHTML = `${prt6}`;
-    document.getElementById("partida_7").innerHTML = `${prt7}`;
-    document.getElementById("partida_8").innerHTML = `${prt8}`;
-    document.getElementById("partida_9").innerHTML = `${prt9}`;
-    document.getElementById("partida_10").innerHTML = `${prt10}`;
+    let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10];
+
+    for(var i = 0; i < partidas.length; i++){
+        let prt = document.getElementById(`partida_${i + 1}`);
+        prt.innerHTML = `${partidas[i]}`
+    };
 };
 
 function jogoCom8() {
-   let jogador1 = document.getElementById("jogador_1").value;
-   let jogador2 = document.getElementById("jogador_2").value;
-   let jogador3 = document.getElementById("jogador_3").value;
-   let jogador4 = document.getElementById("jogador_4").value;
-   let jogador5 = document.getElementById("jogador_5").value;
-   let jogador6 = document.getElementById("jogador_6").value;
-   let jogador7 = document.getElementById("jogador_7").value;
-   let jogador8 = document.getElementById("jogador_8").value;
+    let jogador1 = document.getElementById("jogador_1").value;
+    let jogador2 = document.getElementById("jogador_2").value;
+    let jogador3 = document.getElementById("jogador_3").value;
+    let jogador4 = document.getElementById("jogador_4").value;
+    let jogador5 = document.getElementById("jogador_5").value;
+    let jogador6 = document.getElementById("jogador_6").value;
+    let jogador7 = document.getElementById("jogador_7").value;
+    let jogador8 = document.getElementById("jogador_8").value;
 
     let prt1 = `<tr><td> ${jogador2} - ${jogador1} </td></tr>  <tr><td> ${jogador3} - ${jogador7} </td></tr>`;
     let prt2 = `<tr><td> ${jogador4} - ${jogador6} </td></tr>  <tr><td> ${jogador5} - ${jogador8} </td></tr>`;
@@ -256,32 +286,24 @@ function jogoCom8() {
     let prt13 = `<tr><td> ${jogador8} - ${jogador1} </td></tr>  <tr><td> ${jogador7} - ${jogador2} </td></tr>`;
     let prt14 = `<tr><td> ${jogador6} - ${jogador3} </td></tr>  <tr><td> ${jogador5} - ${jogador4} </td></tr>`;
 
-    document.getElementById("partida_1").innerHTML = `${prt1}`;
-    document.getElementById("partida_2").innerHTML = `${prt2}`;
-    document.getElementById("partida_3").innerHTML = `${prt3}`;
-    document.getElementById("partida_4").innerHTML = `${prt4}`;
-    document.getElementById("partida_5").innerHTML = `${prt5}`;
-    document.getElementById("partida_6").innerHTML = `${prt6}`;
-    document.getElementById("partida_7").innerHTML = `${prt7}`;
-    document.getElementById("partida_8").innerHTML = `${prt8}`;
-    document.getElementById("partida_9").innerHTML = `${prt9}`;
-    document.getElementById("partida_10").innerHTML = `${prt10}`;
-    document.getElementById("partida_11").innerHTML = `${prt11}`;
-    document.getElementById("partida_12").innerHTML = `${prt12}`;
-    document.getElementById("partida_13").innerHTML = `${prt13}`;
-    document.getElementById("partida_14").innerHTML = `${prt14}`;
+    let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10, prt11, prt12, prt13, prt14];
+
+    for(var i = 0; i < partidas.length; i++){
+        let prt = document.getElementById(`partida_${i + 1}`);
+        prt.innerHTML = `${partidas[i]}`
+    };
 };
 
 function jogoCom9() {
-   let jogador1 = document.getElementById("jogador_1").value;
-   let jogador2 = document.getElementById("jogador_2").value;
-   let jogador3 = document.getElementById("jogador_3").value;
-   let jogador4 = document.getElementById("jogador_4").value;
-   let jogador5 = document.getElementById("jogador_5").value;
-   let jogador6 = document.getElementById("jogador_6").value;
-   let jogador7 = document.getElementById("jogador_7").value;
-   let jogador8 = document.getElementById("jogador_8").value;
-   let jogador9 = document.getElementById("jogador_9").value;
+    let jogador1 = document.getElementById("jogador_1").value;
+    let jogador2 = document.getElementById("jogador_2").value;
+    let jogador3 = document.getElementById("jogador_3").value;
+    let jogador4 = document.getElementById("jogador_4").value;
+    let jogador5 = document.getElementById("jogador_5").value;
+    let jogador6 = document.getElementById("jogador_6").value;
+    let jogador7 = document.getElementById("jogador_7").value;
+    let jogador8 = document.getElementById("jogador_8").value;
+    let jogador9 = document.getElementById("jogador_9").value;
 
     let prt1 = `<tr><td> ${jogador2} - ${jogador1} </td></tr>   <tr><td> ${jogador3} - ${jogador9} </td></tr>`;
     let prt2 = `<tr><td> ${jogador4} - ${jogador8} </td></tr>   <tr><td> ${jogador5} - ${jogador7} </td></tr>`;
@@ -302,37 +324,25 @@ function jogoCom9() {
     let prt17 = `<tr><td> ${jogador9} - ${jogador2} </td></tr>   <tr><td> ${jogador8} - ${jogador3} </td></tr>`;
     let prt18 = `<tr><td> ${jogador7} - ${jogador4} </td></tr>   <tr><td> ${jogador6} - ${jogador5} </td></tr>`;
 
-    document.getElementById("partida_1").innerHTML = `${prt1}`;
-    document.getElementById("partida_2").innerHTML = `${prt2}`;
-    document.getElementById("partida_3").innerHTML = `${prt3}`;
-    document.getElementById("partida_4").innerHTML = `${prt4}`;
-    document.getElementById("partida_5").innerHTML = `${prt5}`;
-    document.getElementById("partida_6").innerHTML = `${prt6}`;
-    document.getElementById("partida_7").innerHTML = `${prt7}`;
-    document.getElementById("partida_8").innerHTML = `${prt8}`;
-    document.getElementById("partida_9").innerHTML = `${prt9}`;
-    document.getElementById("partida_10").innerHTML = `${prt10}`;
-    document.getElementById("partida_11").innerHTML = `${prt11}`;
-    document.getElementById("partida_12").innerHTML = `${prt12}`;
-    document.getElementById("partida_13").innerHTML = `${prt13}`;
-    document.getElementById("partida_14").innerHTML = `${prt14}`;
-    document.getElementById("partida_15").innerHTML = `${prt15}`;
-    document.getElementById("partida_16").innerHTML = `${prt16}`;
-    document.getElementById("partida_17").innerHTML = `${prt17}`;
-    document.getElementById("partida_18").innerHTML = `${prt18}`;
+    let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10, prt11, prt12, prt13, prt14, prt15, prt16, prt17, prt18];
+
+    for(var i = 0; i < partidas.length; i++){
+        let prt = document.getElementById(`partida_${i + 1}`);
+        prt.innerHTML = `${partidas[i]}`
+    };
 };
 
 function jogoCom10() {
-   let jogador1 = document.getElementById("jogador_1").value;
-   let jogador2 = document.getElementById("jogador_2").value;
-   let jogador3 = document.getElementById("jogador_3").value;
-   let jogador4 = document.getElementById("jogador_4").value;
-   let jogador5 = document.getElementById("jogador_5").value;
-   let jogador6 = document.getElementById("jogador_6").value;
-   let jogador7 = document.getElementById("jogador_7").value;
-   let jogador8 = document.getElementById("jogador_8").value;
-   let jogador9 = document.getElementById("jogador_9").value;
-   let jogador10 = document.getElementById("jogador_10").value;
+    let jogador1 = document.getElementById("jogador_1").value;
+    let jogador2 = document.getElementById("jogador_2").value;
+    let jogador3 = document.getElementById("jogador_3").value;
+    let jogador4 = document.getElementById("jogador_4").value;
+    let jogador5 = document.getElementById("jogador_5").value;
+    let jogador6 = document.getElementById("jogador_6").value;
+    let jogador7 = document.getElementById("jogador_7").value;
+    let jogador8 = document.getElementById("jogador_8").value;
+    let jogador9 = document.getElementById("jogador_9").value;
+    let jogador10 = document.getElementById("jogador_10").value;
 
     let prt1 = `<tr><td> ${jogador2} - ${jogador1}</td></tr>   <tr><td> ${jogador3} - ${jogador9}</td></tr>`;
     let prt2 = `<tr><td> ${jogador4} - ${jogador8}</td></tr>   <tr><td> ${jogador5} - ${jogador7}</td></tr>`;
@@ -359,27 +369,10 @@ function jogoCom10() {
     let prt23 = `<tr><td> ${jogador1} - ${jogador10}</td></tr> <tr><td> ${jogador3} - ${jogador9}</td></tr>`;
 
 
-    document.getElementById("partida_1").innerHTML = `${prt1}`;
-    document.getElementById("partida_2").innerHTML = `${prt2}`;
-    document.getElementById("partida_3").innerHTML = `${prt3}`;
-    document.getElementById("partida_4").innerHTML = `${prt4}`;
-    document.getElementById("partida_5").innerHTML = `${prt5}`;
-    document.getElementById("partida_6").innerHTML = `${prt6}`;
-    document.getElementById("partida_7").innerHTML = `${prt7}`;
-    document.getElementById("partida_8").innerHTML = `${prt8}`;
-    document.getElementById("partida_9").innerHTML = `${prt9}`;
-    document.getElementById("partida_10").innerHTML = `${prt10}`;
-    document.getElementById("partida_11").innerHTML = `${prt11}`;
-    document.getElementById("partida_12").innerHTML = `${prt12}`;
-    document.getElementById("partida_13").innerHTML = `${prt13}`;
-    document.getElementById("partida_14").innerHTML = `${prt14}`;
-    document.getElementById("partida_15").innerHTML = `${prt15}`;
-    document.getElementById("partida_16").innerHTML = `${prt16}`;
-    document.getElementById("partida_17").innerHTML = `${prt17}`;
-    document.getElementById("partida_18").innerHTML = `${prt18}`;
-    document.getElementById("partida_19").innerHTML = `${prt19}`;
-    document.getElementById("partida_20").innerHTML = `${prt20}`;
-    document.getElementById("partida_21").innerHTML = `${prt21}`;
-    document.getElementById("partida_22").innerHTML = `${prt22}`;
-    document.getElementById("partida_23").innerHTML = `${prt23}`;
+    let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10, prt11, prt12, prt13, prt14, prt15, prt16, prt17, prt18, prt19, prt20, prt21, prt22, prt23];
+
+    for(var i = 0; i < partidas.length; i++){
+        let prt = document.getElementById(`partida_${i + 1}`);
+        prt.innerHTML = `${partidas[i]}`
+    };
 };
