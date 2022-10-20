@@ -7,27 +7,27 @@ btn.addEventListener("click", function () {
     if (nDeJogadores == 5) {
         aparecerLabels5Jgd();
         aparecerJogos5()
-        movimentaElementos ()
+        movimentaElementos()
     } else if (nDeJogadores == 6) {
         aparecerLabels6Jgd()
         aparecerJogos6()
-        movimentaElementos ()
+        movimentaElementos()
     } else if (nDeJogadores == 7) {
         aparecerLabels7Jgd()
         aparecerJogos7()
-        movimentaElementos ()
+        movimentaElementos()
     } else if (nDeJogadores == 8) {
         aparecerLabels8Jgd()
         aparecerJogos8()
-        movimentaElementos ()
+        movimentaElementos()
     } else if (nDeJogadores == 9) {
         aparecerLabels9Jgd()
         aparecerJogos9()
-        movimentaElementos ()
+        movimentaElementos()
     } else if (nDeJogadores == 10) {
         aparecerLabels10Jgd()
         aparecerJogos10()
-        movimentaElementos ()
+        movimentaElementos()
     } else {
         alert('opção invalida, selecione a quantidade de jogadores.')
     }
@@ -35,7 +35,7 @@ btn.addEventListener("click", function () {
 });
 
 //executa funções para posicionamento dos elementos na tela
-function movimentaElementos () {
+function movimentaElementos() {
     aparecerBotaoJogadores()
     desabilitarBotaoJogar()
     irParaPosicao()
@@ -54,16 +54,13 @@ function desabilitarSelectJogadores() {
 
 //função para aparecer o botão de cadastrar os jogadores ao clicar
 function aparecerBotaoJogadores() {
-    const labelBotaoJogadores = document.querySelector('.hide__botao__jogar');
-    labelBotaoJogadores.classList.remove('hide__botao__jogar');
+    document.querySelector('.hide__botao__jogar').classList.remove('hide__botao__jogar');
 }
 
 //função para posiccionar o elemento no começo
 function irParaPosicao() {
-    const posicaoConteudoDetalhe = document.querySelector('.hover__conteudo__detalhe');
-    const tamanhoSelecaoJogadores = document.querySelector('.hover__selecao__jogadores');
-    posicaoConteudoDetalhe.classList.remove('hover__conteudo__detalhe');
-    tamanhoSelecaoJogadores.classList.remove('hover__selecao__jogadores');
+    document.querySelector('.hover__conteudo__detalhe').classList.remove('hover__conteudo__detalhe');
+    document.querySelector('.hover__selecao__jogadores').classList.remove('hover__selecao__jogadores');
 }
 
 //função de escolha de jogadores
@@ -182,7 +179,21 @@ for(i=0; i<10; i++){
     let jogador = document.getElementById(`jogador_${i + 1}`).value;
     console.log(jogador)
    }
+   let jogador1 = document.getElementById("jogador_1");
+   let jogador2 = document.getElementById("jogador_2");
+   let jogador3 = document.getElementById("jogador_3");
+   let jogador4 = document.getElementById("jogador_4");
+   let jogador5 = document.getElementById("jogador_5");
+   let jogador6 = document.getElementById("jogador_6").value;
+   let jogador7 = document.getElementById("jogador_7").value;
+   let jogador8 = document.getElementById("jogador_8").value;
+   let jogador9 = document.getElementById("jogador_9").value;
+   let jogador10 = document.getElementById("jogador_10").value;
+ 
+    let jogadores = [jogador1, jogador2, jogador3, jogador4, jogador5, jogador6, jogador7, jogador8, jogador9, jogador10];
    */
+
+
 
 //jogadores
 function jogoCom5() {
@@ -201,9 +212,8 @@ function jogoCom5() {
 
     let partidas = [prt1, prt2, prt3, prt4, prt5];
 
-    for(var i = 0; i < partidas.length; i++){
-        let prt = document.getElementById(`partida_${i + 1}`);
-        prt.innerHTML = `${partidas[i]}`
+    for (var i = 0; i < partidas.length; i++) {
+        document.getElementById(`partida_${i + 1}`).innerHTML = `${partidas[i]}`
     };
 };
 
@@ -226,11 +236,9 @@ function jogoCom6() {
 
     let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8];
 
-    for(var i = 0; i < partidas.length; i++){
-        let prt = document.getElementById(`partida_${i + 1}`);
-        prt.innerHTML = `${partidas[i]}`
+    for (var i = 0; i < partidas.length; i++) {
+        document.getElementById(`partida_${i + 1}`).innerHTML = `${partidas[i]}`
     };
-
 };
 
 function jogoCom7() {
@@ -255,9 +263,8 @@ function jogoCom7() {
 
     let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10];
 
-    for(var i = 0; i < partidas.length; i++){
-        let prt = document.getElementById(`partida_${i + 1}`);
-        prt.innerHTML = `${partidas[i]}`
+    for (var i = 0; i < partidas.length; i++) {
+        document.getElementById(`partida_${i + 1}`).innerHTML = `${partidas[i]}`
     };
 };
 
@@ -288,9 +295,8 @@ function jogoCom8() {
 
     let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10, prt11, prt12, prt13, prt14];
 
-    for(var i = 0; i < partidas.length; i++){
-        let prt = document.getElementById(`partida_${i + 1}`);
-        prt.innerHTML = `${partidas[i]}`
+    for (var i = 0; i < partidas.length; i++) {
+        document.getElementById(`partida_${i + 1}`).innerHTML = `${partidas[i]}`
     };
 };
 
@@ -326,9 +332,8 @@ function jogoCom9() {
 
     let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10, prt11, prt12, prt13, prt14, prt15, prt16, prt17, prt18];
 
-    for(var i = 0; i < partidas.length; i++){
-        let prt = document.getElementById(`partida_${i + 1}`);
-        prt.innerHTML = `${partidas[i]}`
+    for (var i = 0; i < partidas.length; i++) {
+        document.getElementById(`partida_${i + 1}`).innerHTML = `${partidas[i]}`
     };
 };
 
@@ -371,8 +376,7 @@ function jogoCom10() {
 
     let partidas = [prt1, prt2, prt3, prt4, prt5, prt6, prt7, prt8, prt9, prt10, prt11, prt12, prt13, prt14, prt15, prt16, prt17, prt18, prt19, prt20, prt21, prt22, prt23];
 
-    for(var i = 0; i < partidas.length; i++){
-        let prt = document.getElementById(`partida_${i + 1}`);
-        prt.innerHTML = `${partidas[i]}`
+    for (var i = 0; i < partidas.length; i++) {
+        document.getElementById(`partida_${i + 1}`).innerHTML = `${partidas[i]}`
     };
 };

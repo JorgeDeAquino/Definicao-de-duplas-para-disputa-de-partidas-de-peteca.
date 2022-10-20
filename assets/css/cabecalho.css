@@ -3,10 +3,16 @@
     background-color: #051d40;
     display: flex;
     justify-content: center;
-    padding-bottom: 10px;
+}
+
+.cabecalho__apresentacao{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
 }
 
 .cabecalho__logo {
-    height: 110ps;
-    width: 110px;
+    height: 120px;
+    width: 220px;
 }
