@@ -47,7 +47,9 @@
                         <option value="9"> 9 - jogadores</option>
                         <option value="10">10 - jogadores</option>
                     </select>
-                    <button class="selecao__jogadores-botao btn__action" id="selecao-btn" type="submit"> Jogar </button>
+                    <div class="selecao__jogadores__container-botao">
+                        <button class="selecao__jogadores-botao btn__action" id="selecao-btn" type="submit"> Jogar </button>
+                    </div>
                 </section>
 
                 <section class="exibicao__jogadores">
@@ -94,8 +96,11 @@
                             <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_10" />
                         </li>
                     </ul>
-                    <button class="exibicao__jogadores-botao hide__botao__jogar" id="btn-jogar" type="submit"> Definir
-                        Confrontos </button>
+                    <div class="exibicao__jogadores-botoes">
+                        <button class="exibicao__jogadores-botao hide__botao__jogar" id="btn-jogar" type="submit"> Definir
+                            Confrontos </button>
+                        <button class="exibicao__jogadores-botao hide__botao__reset" id="btn-reset" type="submit"> Recomeçar </button>
+                    </div>
                 </section>
             </nav>
 

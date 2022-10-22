@@ -54,7 +54,8 @@ function desabilitarSelectJogadores() {
 
 //função para aparecer o botão de cadastrar os jogadores ao clicar
 function aparecerBotaoJogadores() {
-    document.querySelector('.hide__botao__jogar').classList.remove('hide__botao__jogar');
+    document.querySelector('#btn-jogar').classList.remove('hide__botao__jogar');
+    document.querySelector('#btn-reset').classList.remove('hide__botao__reset');
 }
 
 //função para posiccionar o elemento no começo
@@ -155,6 +156,14 @@ function aparecerJogos10() {
     return habilitarJogadores;
 }
 
+//função refresh
+const btnReset = document.getElementById("btn-reset");
+
+btnReset.addEventListener("click", function () {
+    location.reload();
+});
+
+
 //função para definir jogos apos preenchimento dos campos
 const btnJogar = document.getElementById("btn-jogar");
 
@@ -173,26 +182,6 @@ btnJogar.addEventListener("click", function () {
         jogoCom10()
     }
 });
-
-/* possivel logica: como inserir elementos dinamicamente, adição de numero na declaração da variavel por template string?
-for(i=0; i<10; i++){
-    let jogador = document.getElementById(`jogador_${i + 1}`).value;
-    console.log(jogador)
-   }
-   let jogador1 = document.getElementById("jogador_1");
-   let jogador2 = document.getElementById("jogador_2");
-   let jogador3 = document.getElementById("jogador_3");
-   let jogador4 = document.getElementById("jogador_4");
-   let jogador5 = document.getElementById("jogador_5");
-   let jogador6 = document.getElementById("jogador_6").value;
-   let jogador7 = document.getElementById("jogador_7").value;
-   let jogador8 = document.getElementById("jogador_8").value;
-   let jogador9 = document.getElementById("jogador_9").value;
-   let jogador10 = document.getElementById("jogador_10").value;
- 
-    let jogadores = [jogador1, jogador2, jogador3, jogador4, jogador5, jogador6, jogador7, jogador8, jogador9, jogador10];
-   */
-
 
 
 //jogadores

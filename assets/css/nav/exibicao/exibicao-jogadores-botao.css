@@ -1,14 +1,25 @@
-.exibicao__jogadores-botao {
+button {
     border-radius: 5px;
-    padding: 0.2rem 0.3rem;
-    margin: 1rem 0;
-    font-size: 0.9rem;
+    border: none;    
+    text-transform: uppercase;
+    padding: 0.2rem ;
     background-color: #fdfdfd;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    flex: 1;
+    margin: 1rem 0;
 }
 
 .exibicao__jogadores-botao:hover {
     font-size: 1rem;
     color: #fdfdfd;
     background-color: #020d3f;
-    cursor: pointer;
+}
+
+.exibicao__jogadores-botoes {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
 }

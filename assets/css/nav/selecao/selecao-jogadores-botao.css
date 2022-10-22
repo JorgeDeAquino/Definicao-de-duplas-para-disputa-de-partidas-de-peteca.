@@ -1,9 +1,5 @@
-.selecao__jogadores-botao{
-    border-radius: 5px;
-    padding: 0.2rem 0.3rem;
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
-    background-color: #fdfdfd;
+.btn__action{
+    padding: 0.8rem 1rem;
 }
 
 .btn__action:active{
@@ -12,7 +8,8 @@
 }
 
 .btn__action:hover{
-    font-size: 1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    border: 3px solid #fdfdfd;
+    background-color: #020d3f;
+    color: #fdfdfd;
 }

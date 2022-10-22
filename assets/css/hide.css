@@ -1,4 +1,4 @@
-.hide__jogadores, .hide__botao__jogar {
+.hide__jogadores, .hide__botao__jogar, .hide__botao__reset {
     display: none;
 }
 
