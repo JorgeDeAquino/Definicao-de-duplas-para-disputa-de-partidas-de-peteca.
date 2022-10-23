@@ -1,7 +1,3 @@
-.hide__jogadores, .hide__botao__jogar, .hide__botao__reset {
-    display: none;
-}
-
-.hide-definicao{
+.hide-definicao, .hide__selecao__jogadores, .hide__botao__definir, .hide__botao__reset {
     display: none;
 }

@@ -1,72 +1,137 @@
-//Botão e seletor de quantidade de jogadores
-const btn = document.getElementById("selecao-btn");
+//seleção de elementos
 
-btn.addEventListener("click", function () {
-    const nDeJogadores = document.querySelector('#quantidade__jogadores-select').value;
+const btnJogar = document.getElementById("selecao-btn");
 
+const mostrarExibJogadores = document.querySelector(".exibicao__jogadores");
+
+const btnReset = document.getElementById("btn-reset");
+
+const btnNovaSelecao = document.getElementById("btn__nova__selecao");
+
+const btnDefinir = document.getElementById("btn-definir");
+
+//array de labels de jogadores
+const labelsJogadores = document.querySelectorAll('.exibicao__jogadores-jogador');
+
+const elementosEscondidos = document.querySelectorAll('.hide-definicao');
+
+let habilitarJogadores = "";
+
+let nDeJogadores = "";
+
+//eventos
+
+//selecao-btn(Jogar)
+
+btnJogar.addEventListener("click", function () {
+    nDeJogadores = document.querySelector('#quantidade__jogadores-select').value
+    
     if (nDeJogadores == 5) {
-        aparecerLabels5Jgd();
-        aparecerJogos5()
-        movimentaElementos()
+        mostrarDivExibicao()
+        aparecerLabels5Jgd()
+        aparecerBotaoJogadores()
+        desabilitarSelecaoJogadores()
+        return(nDeJogadores)
     } else if (nDeJogadores == 6) {
+        aparecerBotaoJogadores()
+        mostrarDivExibicao()
         aparecerLabels6Jgd()
-        aparecerJogos6()
-        movimentaElementos()
+        desabilitarSelecaoJogadores()
+        return(6)
     } else if (nDeJogadores == 7) {
         aparecerLabels7Jgd()
-        aparecerJogos7()
-        movimentaElementos()
+        aparecerBotaoJogadores()
+        mostrarDivExibicao()
+        desabilitarSelecaoJogadores()
+        return(nDeJogadores)
     } else if (nDeJogadores == 8) {
         aparecerLabels8Jgd()
-        aparecerJogos8()
-        movimentaElementos()
+        aparecerBotaoJogadores()
+        mostrarDivExibicao()
+        desabilitarSelecaoJogadores()
+        return(nDeJogadores)
     } else if (nDeJogadores == 9) {
         aparecerLabels9Jgd()
-        aparecerJogos9()
-        movimentaElementos()
+        aparecerBotaoJogadores()
+        mostrarDivExibicao()
+        desabilitarSelecaoJogadores()
+        return(nDeJogadores)
     } else if (nDeJogadores == 10) {
         aparecerLabels10Jgd()
-        aparecerJogos10()
-        movimentaElementos()
+        aparecerBotaoJogadores()
+        mostrarDivExibicao()
+        desabilitarSelecaoJogadores()
+        return(nDeJogadores)
     } else {
         alert('opção invalida, selecione a quantidade de jogadores.')
     }
 
+    
 });
 
-//executa funções para posicionamento dos elementos na tela
-function movimentaElementos() {
-    aparecerBotaoJogadores()
-    desabilitarBotaoJogar()
-    irParaPosicao()
-    desabilitarSelectJogadores()
+//recarregar a pagina
+btnReset.addEventListener("click", function () {
+    location.reload();
+});
+
+
+//definição de confrontos
+btnDefinir.addEventListener("click", function () {
+    desabilitarExibicaoJogadores()
+    if (nDeJogadores == 5) {
+        aparecerJogos5()
+        jogoCom5()
+    } else if (nDeJogadores == 6) {
+        aparecerJogos6()
+        jogoCom6()
+    } else if (nDeJogadores == 7) {
+        aparecerJogos7()
+        jogoCom7()
+    } else if (nDeJogadores == 8) {
+        aparecerJogos8()
+        jogoCom8()
+    } else if (nDeJogadores == 9) {
+        aparecerJogos9()
+        jogoCom9()
+    } else if (nDeJogadores == 10) {
+        aparecerJogos10()
+        jogoCom10()
+    }
+    aparecerBotaoNovaSelecao()
+});
+
+btnNovaSelecao.addEventListener("click", function () {
+    location.reload();
+});
+
+
+//funções
+
+function desabilitarSelecaoJogadores() {
+    document.querySelector(".selecao__jogadores").classList.add('hide__selecao__jogadores');
 }
 
-//função desabilitar o botão apos seleção de numero de jogadores
-function desabilitarBotaoJogar() {
-    document.getElementById("selecao-btn").classList.add('hide__botao__jogar');
+function desabilitarExibicaoJogadores() {
+    document.querySelector(".exibicao__jogadores").classList.add('hide__jogadores');
+    document.querySelector(".selecao__exibicao").classList.add('hide__selecao__exibicao');
 }
 
-//função desabilitar o label apos seleção de numero de jogadores
-function desabilitarSelectJogadores() {
-    document.getElementById("quantidade__jogadores-select").disabled = true;
-}
-
-//função para aparecer o botão de cadastrar os jogadores ao clicar
+//ao clicar em jogar aparece os botoes juntos com as labels
 function aparecerBotaoJogadores() {
-    document.querySelector('#btn-jogar').classList.remove('hide__botao__jogar');
+    document.querySelector('#btn-definir').classList.remove('hide__botao__definir');
     document.querySelector('#btn-reset').classList.remove('hide__botao__reset');
 }
 
-//função para posiccionar o elemento no começo
-function irParaPosicao() {
-    document.querySelector('.hover__conteudo__detalhe').classList.remove('hover__conteudo__detalhe');
-    document.querySelector('.hover__selecao__jogadores').classList.remove('hover__selecao__jogadores');
+function aparecerBotaoNovaSelecao() {
+    document.querySelector('.botao__nova__selecao').classList.remove('hide__btn__nova__selecao');
 }
 
-//função de escolha de jogadores
-const labelsJogadores = document.querySelectorAll('.hide__jogadores');
+//exibe div exibição jogadores
+function mostrarDivExibicao() {
+    mostrarExibJogadores.classList.remove('hide__jogadores');
+}
 
+//liberação do numero exato apos escolha de jogadores
 function aparecerLabels5Jgd() {
     for (var i = 0; i < labelsJogadores.length - 5; i++) {
         labelsJogadores[i].classList.remove('hide__jogadores')
@@ -103,9 +168,7 @@ function aparecerLabels10Jgd() {
     }
 }
 
-//retirada de class esconder
-const elementosEscondidos = document.querySelectorAll('.hide-definicao');
-let habilitarJogadores = "";
+
 
 //Libera elementos na quantidade selecionada
 function aparecerJogos5() {
@@ -156,35 +219,8 @@ function aparecerJogos10() {
     return habilitarJogadores;
 }
 
-//função refresh
-const btnReset = document.getElementById("btn-reset");
 
-btnReset.addEventListener("click", function () {
-    location.reload();
-});
-
-
-//função para definir jogos apos preenchimento dos campos
-const btnJogar = document.getElementById("btn-jogar");
-
-btnJogar.addEventListener("click", function () {
-    if (habilitarJogadores == 5) {
-        jogoCom5()
-    } else if (habilitarJogadores == 6) {
-        jogoCom6()
-    } else if (habilitarJogadores == 7) {
-        jogoCom7()
-    } else if (habilitarJogadores == 8) {
-        jogoCom8()
-    } else if (habilitarJogadores == 9) {
-        jogoCom9()
-    } else if (habilitarJogadores == 10) {
-        jogoCom10()
-    }
-});
-
-
-//jogadores
+//definição de confrontos aparece na tela
 function jogoCom5() {
     let jogador1 = document.getElementById("jogador_1").value;
     let jogador2 = document.getElementById("jogador_2").value;

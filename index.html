@@ -9,16 +9,10 @@
     <link rel="stylesheet" href="./assets/css/cabecalho.css">
     <link rel="stylesheet" href="./assets/css/rodape.css">
     <link rel="stylesheet" href="./assets/css/main-template.css">
-    <link rel="stylesheet" href="./assets/css/nav/selecao-exibicao.css">
-    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores-botao.css">
-    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores-label.css">
-    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores-select.css">
-    <link rel="stylesheet" href="./assets/css/nav/selecao/selecao-jogadores.css">
-    <link rel="stylesheet" href="./assets/css/nav/exibicao/exibicao-jogadores-botao.css">
-    <link rel="stylesheet" href="./assets/css/nav/exibicao/exibicao-jogadores.css">
-    <link rel="stylesheet" href="./assets/css/nav/definicao-table/definicao-confrontos.css">
     <link rel="stylesheet" href="./assets/css/hide.css">
+    <link rel="stylesheet" href="./assets/css/style-main.css">
     <script src="./assets/js/main.js" defer></script>
+
     <title>Peteca de Quinta</title>
 </head>
 
@@ -30,14 +24,14 @@
         </picture>
     </header>
 
-    <main class="conteudo">
-        <section class="conteudo__detalhe hover__conteudo__detalhe">
+    <main class="conteudo__detalhe">
+        <section class="conteudo">
             <nav class="selecao__exibicao">
-                <section class="selecao__jogadores">
+                <div class="selecao__jogadores">
                     <label class="selecao__jogadores-label" for="quantidade__jogadores-select"> SELECIONE A QUANTIDADE
                         DE
                         JOGADORES </label>
-                    <select required class="selecao__jogadores-select hover__selecao__jogadores" name="quantidade__jogadores-select"
+                    <select required class="selecao__jogadores-select" name="quantidade__jogadores-select"
                         id="quantidade__jogadores-select">
                         <option disabled selected> Numero de Jogadores? </option>
                         <option value="5"> 5 - jogadores</option>
@@ -48,60 +42,73 @@
                         <option value="10">10 - jogadores</option>
                     </select>
                     <div class="selecao__jogadores__container-botao">
-                        <button class="selecao__jogadores-botao btn__action" id="selecao-btn" type="submit"> Jogar </button>
+                        <button class="selecao__jogadores-botao btn__action" id="selecao-btn" type="submit"> Jogar
+                        </button>
                     </div>
-                </section>
+                </div>
 
-                <section class="exibicao__jogadores">
-                    <h2 class="exibicao__jogadores-titulo hide__jogadores"> Jogadores </h2>
+                <div class="exibicao__jogadores hide__jogadores">
+                    <h2 class="exibicao__jogadores-titulo"> Jogadores </h2>
                     <ul>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 01 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_1" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_1" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 02 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_2" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_2" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 03 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_3" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_3" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 04 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_4" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_4" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 05 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_5" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_5" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 06 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_6" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_6" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 07 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_7" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_7" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 08 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_8" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_8" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 09 </label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_9" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_9" />
                         </li>
                         <li class="exibicao__jogadores-jogador hide__jogadores">
                             <label class="exibicao__jogadores-label"> Jogador - 10</label>
-                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text" id="jogador_10" />
+                            <input placeholder="Nome do jogador" class="exibicao__jogadores-input" type="text"
+                                id="jogador_10" />
                         </li>
                     </ul>
                     <div class="exibicao__jogadores-botoes">
-                        <button class="exibicao__jogadores-botao hide__botao__jogar" id="btn-jogar" type="submit"> Definir
+                        <button class="exibicao__jogadores-botao hide__botao__definir" id="btn-definir" type="submit">
+                            Definir
                             Confrontos </button>
-                        <button class="exibicao__jogadores-botao hide__botao__reset" id="btn-reset" type="submit"> Recomeçar </button>
+                        <button class="exibicao__jogadores-botao hide__botao__reset" id="btn-reset" type="submit">
+                            Recomeçar </button>
                     </div>
-                </section>
+                </div>
             </nav>
 
             <section class="definicao__confrontos">
@@ -357,6 +364,9 @@
                         <tbody id="partida_23">
                         </tbody>
                     </table>
+                </div>
+                <div class="botao__nova__selecao hide__btn__nova__selecao">
+                    <button id="btn__nova__selecao" type="submit"> Nova Seleção </button>
                 </div>
             </section>
         </section>

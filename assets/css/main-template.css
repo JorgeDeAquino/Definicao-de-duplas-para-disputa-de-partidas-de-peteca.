@@ -8,30 +8,3 @@ body {
     grid-template-columns: auto;
     grid-template-rows: 120px auto  60px; 
 }
-
-.conteudo {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    min-height: calc(100vh - 180px);
-    width: 100%;
-}
-
-.conteudo__detalhe {
-    align-items: flex-start;
-    background-color: #191970;
-    border-radius: 12px;
-    box-shadow: 0px 0px 16px 3px rgba(6,8,18,1);
-    color: #fdfdfd;
-    display: flex;
-    justify-content: center;
-    margin: 0.5rem 0;
-    width: 98%;
-    min-height: 90%;
-}
-
-.hover__conteudo__detalhe {
-    align-items: center;
-    padding-left: 35%;
-    width: 63%;
-}
