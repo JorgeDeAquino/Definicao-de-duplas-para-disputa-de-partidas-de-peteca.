@@ -4,7 +4,7 @@ Deseja conferir como ficou o resultado do projeto? Teste a funcionalidade atrav�
 
 ## **Demonstração Desktop**
   
-<img src="img-readme/tela-inicial-desk.png" height="400px"> <img src="img-readme/tela-inserir-desk.png" height="400px"> <img src="img-readme/tela-confrontos-desk.png" width="400px" height="400px">
+<img src="img-readme/tela-inicial-desk.png" width="400px" height="400px"> <img src="img-readme/tela-inserir-desk.png" width="400px" height="400px"> <img src="img-readme/tela-confrontos-desk.png" width="400px" height="400px">
 
 ## **Demonstração Mobile** <h2>
 
