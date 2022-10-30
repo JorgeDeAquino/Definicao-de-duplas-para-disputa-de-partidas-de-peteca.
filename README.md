@@ -4,11 +4,11 @@ Deseja conferir como ficou o resultado do projeto? Teste a funcionalidade atrav�
 
 ## **Demonstração Desktop**
   
-<img src="img-readme/tela-inicial-desk.png" width="300px"> <img src="img-readme/tela-inserir-desk.png" width="300px"> <img src="img-readme/tela-confrontos-desk.png" width="300px">
+<img src="img-readme/tela-inicial-desk.png" height="400px"> <img src="img-readme/tela-inserir-desk.png" height="400px"> <img src="img-readme/tela-confrontos-desk.png" width="400px" height="400px">
 
 ## **Demonstração Mobile** <h2>
 
-<img src="img-readme/tela-inicial-mobile.png" width="300px"> <img src="img-readme/tela-inserir-mobile.png" width="300px"> <img src="img-readme/tela-confrontos-mobile.png" width="300px">
+<img src="img-readme/tela-inicial-mobile.png" height="400px"> <img src="img-readme/tela-inserir-mobile.png" height="400px" width="200px"> <img src="img-readme/tela-confrontos-mobile.png" width="100px" height="500px">
 
 
 ## **Sobre o Projeto** <h2>
